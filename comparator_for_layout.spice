@@ -1,0 +1,43 @@
+* NGSPICE file created from comparator_for_layout.ext - technology: sky130A
+
+.subckt sky130_fd_pr__pfet_01v8_J8PPQP a_n73_n100# a_15_n100# w_n211_n319# a_n33_n197#
+X0 a_15_n100# a_n33_n197# a_n73_n100# w_n211_n319# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_TGNW9T a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
+X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_3SNH8H a_n33_n50# a_n227_n224# a_63_n50# a_n125_n50#
++ a_15_72# a_n81_n138#
+X0 a_n33_n50# a_n81_n138# a_n125_n50# a_n227_n224# sky130_fd_pr__nfet_01v8 ad=0.0825 pd=0.83 as=0.155 ps=1.62 w=0.5 l=0.15
+X1 a_63_n50# a_15_72# a_n33_n50# a_n227_n224# sky130_fd_pr__nfet_01v8 ad=0.155 pd=1.62 as=0.0825 ps=0.83 w=0.5 l=0.15
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_X8MKUN a_15_81# a_n81_n147# a_n33_n50# a_63_n50# a_n125_n50#
++ w_n263_n269#
+X0 a_n33_n50# a_n81_n147# a_n125_n50# w_n263_n269# sky130_fd_pr__pfet_01v8 ad=0.0825 pd=0.83 as=0.155 ps=1.62 w=0.5 l=0.15
+X1 a_63_n50# a_15_81# a_n33_n50# w_n263_n269# sky130_fd_pr__pfet_01v8 ad=0.155 pd=1.62 as=0.0825 ps=0.83 w=0.5 l=0.15
+.ends
+
+.subckt sky130_fd_pr__cap_mim_m3_1_9482M8 m3_n686_n240# c1_n646_n200#
+X0 c1_n646_n200# m3_n686_n240# sky130_fd_pr__cap_mim_m3_1 l=2 w=5
+.ends
+
+.subckt comparator_for_layout IN1 IN2 OUT VDD VSS
+XXM12 VDD OUT VDD m1_4896_n8948# sky130_fd_pr__pfet_01v8_J8PPQP
+XXM13 VSS m1_4896_n8948# OUT VSS sky130_fd_pr__nfet_01v8_TGNW9T
+XXM1 m1_4102_n8620# m1_4102_n8620# VSS VSS sky130_fd_pr__nfet_01v8_TGNW9T
+XXM2 VSS VSS m1_3882_n7970# m1_3882_n7970# IN2 IN2 sky130_fd_pr__nfet_01v8_3SNH8H
+XXM3 VDD m1_4102_n8620# VDD m1_4102_n8620# sky130_fd_pr__pfet_01v8_J8PPQP
+XXM4 VDD m1_4896_n8948# VDD m1_4582_n8946# sky130_fd_pr__pfet_01v8_J8PPQP
+XXM5 VSS m1_4102_n8620# VSS VSS sky130_fd_pr__nfet_01v8_TGNW9T
+XXM6 a_2794_n8302# a_2794_n8302# VDD m1_3882_n7970# m1_3882_n7970# VDD sky130_fd_pr__pfet_01v8_X8MKUN
+XXM7 VSS m1_4102_n8620# m1_4582_n8946# VSS sky130_fd_pr__nfet_01v8_TGNW9T
+XXM9 VDD m1_4582_n8946# VDD m1_3882_n7970# sky130_fd_pr__pfet_01v8_J8PPQP
+XXM8 VSS VSS a_2794_n8302# a_2794_n8302# IN1 IN1 sky130_fd_pr__nfet_01v8_3SNH8H
+XXC8 OUT VSS sky130_fd_pr__cap_mim_m3_1_9482M8
+XXM10 a_2794_n8302# a_2794_n8302# VDD m1_2534_n8218# a_2794_n8302# VDD sky130_fd_pr__pfet_01v8_X8MKUN
+XXM11 VSS m1_4582_n8946# m1_4896_n8948# VSS sky130_fd_pr__nfet_01v8_TGNW9T
+.ends
+
