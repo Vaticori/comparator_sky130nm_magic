@@ -1,2 +1,23 @@
-# comparator_sky130nm_magic
-A in progress layout design in magic of a comparator circuit I made and tested in xschem using sky130 nfets &amp; pfets.
+# SAR ADC Comparator Layout
+
+Physical layout design for a comparator using Magic VLSI and Sky130nm PDK.
+
+## Features
+
+- Manual layout design with Magic VLSI (no auto place & route)
+- Sky130nm open-source PDK
+- Space-efficient design with guard ring sharing
+- Multi-finger differential transistors for better matching
+- All DRC violations resolved
+
+## Files
+
+- `comparator_for_layout.mag` - Magic layout file
+- `comparator_for_layout.sch` - Xschem schematic  
+
+
+## Tools Used
+
+- Magic VLSI Layout Editor
+- Sky130 PDK
+- Xschem (schematic)
