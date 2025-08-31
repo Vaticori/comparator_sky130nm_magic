@@ -1,4 +1,4 @@
-# SAR ADC Comparator Layout
+# Comparator Layout
 
 Physical layout design for a comparator using Magic VLSI and Sky130nm PDK.
 
