@@ -2,7 +2,8 @@
 
 Physical layout design for a comparator using Magic VLSI and Sky130nm PDK.
 
-![Comparator](comparator_layout.png)
+<img width="1284" height="468" alt="comparator_layout" src="https://github.com/user-attachments/assets/17f6bd96-a935-4ab6-bd8c-8e2f46784e00" />
+
 ## Features
 
 - Manual layout design with Magic VLSI (no auto place & route)
